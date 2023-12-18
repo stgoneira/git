@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>GIT</title>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.2/reset.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.2/reveal.min.css" />
+		
+		<!-- otros themes: https://revealjs.com/themes/ Ejemplos: black, white, league, beige, sky, night, serif, simple, solarized, blood, moon -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.2/theme/white.min.css" />
+		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.2/theme/blood.min.css" /> -->
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.2/plugin/highlight/monokai.min.css" />
+		
+		<link rel="stylesheet" href="estilo.css" />
+		
+		<!-- plugin notación matemática -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.2/plugin/math/math.min.js"></script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-separator="^---$" data-separator-vertical="^===$" data-separator-notes="^Note:" data-markdown data-line-numbers>
+    				<textarea data-template>
+## [GIT](#)
+### Santiago Neira
+
+---
+## [¿Qué es GIT?](#)
+
+- Sistema de [Control de Versiones](#) distribuido 
+- Distribuido quiere decir que pueden haber [varios repositorios](#) 
+- A diferencia de [otros sistemas centralizados](#) como Subversion 
+
+---
+## [¿Qué es Github?](#)
+
+- Una plataforma que permite [alojar repositorios GIT](#)
+- Tiene otras herramientas de colaboración que complementan
+- Como proyectos, wikis, etc 
+
+---
+## [Flujo Trabajo - GIT](#)
+![Flujo trabajo GIT](img/git-workflow.svg)
+
+---
+## [Flujo Trabajo - GIT](#)
+
+- Se puede realizar a través de CLI (ej: [Git Bash](#))
+- O con alguna herramienta GUI especializada, integrada o extensión (plugin)
+- Ejemplos: VSCode, Android Studio, Github Desktop, etc
+- https://git-scm.com/downloads/guis 
+
+---
+## [Instalación - GIT](#)
+
+- Es suficiente con hacer [siguiente y siguiente](#) 
+- Obviamente, puede personalizar varias cosas como 
+- La ubicación de la instalación 
+- El editor de texto por defecto 
+- https://git-scm.com/ 
+
+===
+## [Instalación - GIT](#)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E4mgWSRs_ck?si=guzCC1Vvh7oDeLFv" allowfullscreen></iframe>
+
+---
+## [Configuración - GIT](#)
+Para empezar a utilizar debe configurar su email y usuario en una terminal
+```bash
+git config --global user.name "TuUsuarioDeGithub"
+git config --global user.email "tuemail@tudominio.com"
+```
+
+===
+## [Configuración - GIT](#)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Myna6hJJAOU?si=RKiC04hQvrPB5POI" allowfullscreen></iframe>
+
+---
+## [GIT Trabajo Repo Local - AS](#)
+- Puede crear y trabajar en un repositorio local en un inicio en Android Studio (AS)
+- El repositorio se crea una sola vez
+- El flujo de trabajo de COMMITs se repite
+- Se puede sincronizar posteriormente con un repositorio remoto
+
+===
+## [GIT Trabajo Repo Local - AS](#)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lyN6-dW__54?si=G2n-o0cAC_sWc-qC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+## [Github Crear Repo con Token - AS](#)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/W7g843KKMds?si=IGTFGhhcFwGnBJy2" allowfullscreen></iframe>
+
+---
+## [Github Trabajo Diario - AS](#)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/I0Y8Xo4U_uc?si=yQN8vbLPhBKD-k2l" allowfullscreen></iframe>
+
+
+				    </textarea>
+				</section>
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.2/reveal.min.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.2/plugin/notes/notes.min.js"></script>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.2/plugin/markdown/markdown.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.2/plugin/highlight/highlight.min.js"></script>
+		<script>			
+			Reveal.initialize({
+				hash: true,
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
+			});
+			Reveal.on('ready', e => {
+				// e.previousSlide, e.currentSlide, e.indexh, e.indexv 				
+				const claseSlide = `slide-${e.indexh}-${e.indexv}`
+				document.body.className = `reveal-viewport ${claseSlide}`
+			});
+			Reveal.on('slidechanged', e => {
+				// e.previousSlide, e.currentSlide, e.indexh, e.indexv 				
+				const claseSlide = `slide-${e.indexh}-${e.indexv}`
+				document.body.className = `reveal-viewport ${claseSlide}`
+			});
+		</script>
+	</body>
+</html>
